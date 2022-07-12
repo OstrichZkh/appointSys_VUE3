@@ -6,7 +6,7 @@
 2、分别提供了模拟发送验证码（服务端控制台显示）和阿里云发送验证码（手机接收，需要申请服务密钥）接口；
 3、开发环境为nodeJs v16.13.12；
 
-#技术栈
+# 技术栈
 vue3 + vuex + vue-router + elementPlus + nodeJs + mySql(navcat)
 
 ## 项目安装
