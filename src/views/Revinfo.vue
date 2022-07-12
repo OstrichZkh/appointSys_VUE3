@@ -172,19 +172,20 @@ export default {
           axios({
           method:'GET',
           url:'http://localhost:3002/login/code',
-          query:{
-            phone:'registerForm.phone'
+          params:{
+            phone:registerForm.phone
           }
         }).then((res=>{
           console.log(res)
         }))
         // 开始倒计时
-        countDown.value = 60
+        countDown.value = 3
         isCodeSend.value = true
         let timer = setInterval(()=>{
           countDown.value--
           if(countDown.value==0){
             clearInterval(timer)
+            isCodeSend.value = false
           }
         },1000)
       }else{

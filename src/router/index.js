@@ -7,6 +7,7 @@ const routes = [
     path: '/',
     redirect:'/login'
   },
+  
   {
     path: '/home',
     name: 'home',
@@ -54,21 +55,21 @@ const router = createRouter({
   routes
 })
 
-// router.beforeEach((to,from,next)=>{
-//   if(localStorage.getItem('token')){
-//     //验证jwt
-//     if(to.name=='login'){
-//       router.push('/home')
-//     }else{
-//       next()
-//     }
-//   }else{
-//     if(to.meta.reqAuth!==true){
-//       next()
-//     }else{
-//       router.push('/login')
-//     }
-// }
-// })
+router.beforeEach((to,from,next)=>{
+  if(localStorage.getItem('token')){
+    //验证jwt
+    if(to.name=='login'){
+      router.push('/home')
+    }else{
+      next()
+    }
+  }else{
+    if(to.meta.reqAuth!==true){
+      next()
+    }else{
+      router.push('/login')
+    }
+}
+})
 
 export default router

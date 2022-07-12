@@ -82,8 +82,8 @@ export default {
                 }
             }).then(res=>{
                 if(res.data.code==200){
-                    localStorage.removeItem('phone')
-                    localStorage.setItem('phone',res.data.data.phone)
+                    localStorage.removeItem('info')
+                    localStorage.setItem('info',JSON.stringify(res.data.data))
                     localStorage.setItem('token',res.data.token)
                     router.push({
                         name:'home',

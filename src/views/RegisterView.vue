@@ -158,8 +158,8 @@ export default {
           axios({
           method:'GET',
           url:'http://localhost:3002/login/code',
-          query:{
-            phone:'registerForm.phone'
+          params:{
+            phone:registerForm.phone
           }
         }).then((res=>{
           console.log(res)

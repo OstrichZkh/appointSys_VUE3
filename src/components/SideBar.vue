@@ -12,10 +12,10 @@
             <router-link :to="items[1].path" class="tags-li-title">{{items[1].title}}</router-link>
         </el-menu-item>
 
-        <el-menu-item index="3">
+        <!-- <el-menu-item index="3">
             <el-icon><DeleteLocation /></el-icon>
             <router-link :to="items[2].path" class="tags-li-title">{{items[2].title}}</router-link>
-        </el-menu-item>
+        </el-menu-item> -->
 
         <el-menu-item index="4">
             <el-icon><DeleteLocation /></el-icon>
@@ -39,22 +39,22 @@ export default defineComponent ({
             {
                 index: "/appoint",
                 title: "预约中心",
-                path:"appoint"
+                path:"Appoint"
             },
             {
                 index: "/makeappoint",
                 title: "活动预约",
-                path:"makeappoint"
+                path:"Makeappoint"
             },
             {
                 index: "/info",
                 title: "个人中心",
-                path:"info"
+                path:"Info"
             },
             {
                 index: "/revinfo",
                 title: "信息修改",
-                path:"revinfo"
+                path:"Revinfo"
             }
             ]
     return {
