@@ -22,11 +22,20 @@ express运行在3002接口上。
 1.  http://localhost:3002/app/makeappoint  ->post请求，向数据库提交预约信息
 2.  http://localhost:3002/app/getapplist  ->get请求，向数据库查询预约信息
 3.  http://localhost:3002/app/delapplist  ->post请求，向数据库删除预约信息
+4.  http://localhost:3002/app/getteacher  ->get请求，向数据库获取所有老师的信息，用于学生预约时选择老师
 
 
 ## 登录/注册界面
 ![image](preview/login.jpg)
 ![image](preview/register.jpg)
+
+## 预约信息显示
+学生只能看见预约人为自己的条目
+![image](preview/student.jpg)
+老师只能看见预约对象为自己的条目
+![image](preview/teacher.jpg)
+管理员能看所有条目
+![image](preview/admin.jpg)
 
 ## 项目安装
 ```
